@@ -1,26 +1,27 @@
-// 클래스
-// public : (접근)제어자(공공의, 공통의) - 외부에서도 실행시킬수 있는?
+// 1주차 과제 : 요리 레시피 메모장 만들기
+import java.util.Scanner;
 
 public class Main {
-    // [JDK]
-    // (1) compiler : .java -> .class
-    // (2) JRE
-    // (3) JDB : 디버깅
-
-    // () : 소괄호, {} : 중괄호, [] : 대괄호
-    // main 메소드, Java 앱(프로젝트)는 항상 main 메소드를 먼저 실행시킴(JVM의 규칙)
-    // static : 이 프로그램이 시작될때 무조건 실행되는 녀석임을 표현
-    // void : 출력값의 데이터 타입 -> 반환값 없음
-    // (String[] args) : 메소드 시작 시 넘겨받을 데이터들(변수들) - 매개변수 자리 - input
     public static void main(String[] args) {
+        Scanner hc = new Scanner(System.in);
 
-        // 객체 : 특징(속성, 변수), 행동(메소드)
-        // 하위객체 표현 : .
-        // system의 out객체의 행동인 println()메소드를 실행하라는 것
+        //input
+        String title = hc.nextLine();
+        double score = hc.nextDouble();
+        // 버퍼 문제 해결을 위해서 한 번 더 nextLine() 호출 --- 이건 gpt가 알려줫어요,,
+        hc.nextLine();
+        //한줄씩 실행되지 않도록 하기 위해 배열로 지정 후 입력,출력 반복문을 따로 작성
+        String[] memo = new String[10];
+        for(int i=0; i<10; i++){   //요녀석이 계속 문제였습니다.. 이하가 아닌 미만으로.. 인덱스 범위 10개..!
+            memo[i] = hc.nextLine();
+        }
 
-        System.out.println(7);
-        System.out.println(3);
-        System.out.println(3.14);
-        System.out.println("JAVA");
+        //output
+        System.out.println("[ " + title +" ]");
+        //10점만점이 아닌 5점으로 계산해야 하기에 *20으로 변경
+        System.out.println("별점:" + (int)score + "(" + score*20 + "%)");
+        for (int i = 0; i < 10; i++) {
+            System.out.println((i+1) + ". " + memo[i]);
+        }
     }
 }
