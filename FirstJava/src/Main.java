@@ -9,11 +9,11 @@ public class Main {
         String title = hc.nextLine();
         double score = hc.nextDouble();
         // 버퍼 문제 해결을 위해서 한 번 더 nextLine() 호출 --- 이건 gpt가 알려줫어요,,
-        hc.nextLine();
+//        hc.nextLine();
         //한줄씩 실행되지 않도록 하기 위해 배열로 지정 후 입력,출력 반복문을 따로 작성
         String[] memo = new String[10];
         for(int i=0; i<10; i++){   //요녀석이 계속 문제였습니다.. 이하가 아닌 미만으로.. 인덱스 범위 10개..!
-            memo[i] = hc.nextLine();
+            memo[i] = hc.next();
         }
 
         //output

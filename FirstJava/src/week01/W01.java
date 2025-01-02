@@ -1,6 +1,8 @@
+package week01;
+
 // 클래스
 // public : (접근)제어자(공공의, 공통의) - 외부에서도 실행시킬수 있는?
-public class Main {
+public class W01 {
 
     public static void main(String[] args) {
         // [기본형 변수]
