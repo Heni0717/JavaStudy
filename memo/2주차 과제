@@ -28,3 +28,21 @@ public class Main {
         }
     }
 }
+
+--------------------------------정답코드 확인 후
+    - 자료구조 변수 입력받아서
+    - switch문 피연산자(자료구조)
+    - case "List" :
+          ArrayList<String> strList = new ArrayList<>();
+          아래반복입력은 같음
+          출력까지 반복
+      case "Set" :
+         LinkedHashSet<String> strSet = new LinkedHashSet<>();
+          아래반복입력은 같음
+          출력까지 반복
+      case "Map" :
+          Map<Integer, String> strMap = new HashMap<>();
+          아래반복입력은 같음
+          출력까지 반복
+      default :
+            예외 처리
